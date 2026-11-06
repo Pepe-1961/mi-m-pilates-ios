@@ -9,7 +9,7 @@ workflows:
       groups:
         - appstore_credentials
       vars:
-        BUNDLE_ID: "es.mpilates"
+        BUNDLE_ID: "es.mpilates.app"
         XCODE_WORKSPACE: "src/Mi M Pilates.xcworkspace"
         XCODE_SCHEME: "Mi M Pilates"
         APP_STORE_APPLE_ID: 6831267981
