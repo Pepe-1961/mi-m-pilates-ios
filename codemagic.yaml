@@ -12,7 +12,7 @@ workflows:
       vars:
         XCODE_WORKSPACE: "src/Mi M Pilates.xcworkspace"
         XCODE_SCHEME: "Mi M Pilates"
-        APP_STORE_APPLE_ID: 0000000000 # sustituir por el Apple ID numerico de la app en App Store Connect
+        APP_STORE_APPLE_ID: 6831267981
       xcode: latest
       cocoapods: default
     scripts:
