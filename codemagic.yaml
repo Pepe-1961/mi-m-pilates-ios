@@ -17,9 +17,9 @@ workflows:
       - name: Decodificar assets binarios (.b64 -> binario real)
         script: |
           set -e
-          find src -type f -name "*.b64" | while read -r b64file; do
+          find src -type f -name "*.b64" -print0 | while IFS= read -r -d '' b64file; do
             outfile="${b64file%.b64}"
-            base64 -d "$b64file" > "$outfile"
+            python3 -c "import base64,sys; open(sys.argv[2],'wb').write(base64.b64decode(open(sys.argv[1],'rb').read()))" "$b64file" "$outfile"
             rm "$b64file"
             echo "Decodificado: $outfile"
           done
